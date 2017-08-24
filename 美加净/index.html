@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>美加净·邂逅芬芳</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/animator.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/weixin.js"></script>
+
+   
+    <style>
+    .cover1 {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    .status1 {
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -142px;
+        margin-top: -142px;
+        background-color: #51d8ff;
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+
+    .victory_img1 {
+        width: 260px;
+        margin: 90px auto 20px;
+    }
+
+    .fail_img1 {
+        width: 200px;
+        margin: 70px auto 20px;
+    }
+
+    .victory_btn1, .fail_btn1 {
+        display: block;
+        width: 130px;
+        margin: auto;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap2" id="score">
+    <a class="btn" id="next" href="javascript:;"><img src="images/next_03.png"></a>
+</div>
+      
+<!--第二关-->
+<div class="wrap4" style="display:none;">
+	<!--<div class="log"><img src="images/log_03.png" /></div>-->
+    <div class="cover" id="cover_i">
+		<div class="status">
+		    <div class="close_v" id="start_i_close"><img src="images/close_03.png"></div>
+			<img src="images/eqe321.png">
+			<div class="victory">
+				<div class="tishi"><img src="images/tishi_03.png"></div>
+				<a class="victory_btn" id="start_i" href="javascript:;"><img src="images/start_03.png"></a>
+			</div>
+		</div>
+    </div>  
+  <div class="hua">
+       <div class="hua1"><img class="huaduo2" src="images/hua_yw_03.png"></div>
+       <div class="hua1"><img class="huaduo3" src="images/hua_yl_03.png"></div>
+       <div class="hua1"><img class="huaduo4" src="images/hua_wx_03.png"></div>
+  </div>
+  	
+    <div class="title_i"><img src="images/title_03.png"></div>
+    <div class="renwu_i">
+    	<img class="renw" src="images/renwu_i_02.png">
+    </div>
+    <div class="paomo">
+    	<img src="images/paomo_03.png">
+    </div>
+    <div class="nengliangc">
+    	<div class="nengliang1"></div>
+    </div>
+    <div class="chanpin_i">
+    	<img class="zhiwujia" src="images/zhiwujia_03.png">
+        <img class="chanpin2" src="images/chanpin_05.png">
+        <img class="chanpin3" src="images/chanpin_07.png">
+        <img class="chanpin4" src="images/chanpin_09.png">
+    </div>
+     <div class="chanpin" style="display:none;">
+    	<img class="zhiwujia" src="images/zhiwujia_03.png">
+        <div class="chanpin2 cp"><img src="images/chanpin_05.png"></div>
+        <div class="chanpin3 cp"><img src="images/chanpin_07.png"></div>
+        <div class="chanpin4 cp"><img src="images/chanpin_09.png"></div>
+    </div>
+</div>
+
+<div class="wrap3" style="display:none;">
+	<!--<div class="log"><img src="images/log_03.png" /></div>-->
+  <div class="hua">
+       <div class="hua1"><img class="huaduo2 BounceIn" src="images/hua_yw_03.png"></div>
+       <div class="hua1"><img class="huaduo3 BounceIn" src="images/hua_yl_03.png"></div>
+       <div class="hua1"><img class="huaduo4 BounceIn" src="images/hua_wx_03.png"></div>
+  </div>
+    <div class="renwu" style="display:none;">
+    	<div class="title"><img src="images/title2_03.png"></div>
+	    <div class="renwu_i">
+	    	<img class="renw" src="images/renwu2_02.png">
+			<div class="scope2">
+				<div class="shoushi2"><img src="images/shoushi_03.png"></div>
+				<div class="yuhua3" id="yuhua2"><img src="images/yuhua1_03.png"></div>
+				<img class="pao" src="images/paomo3_04.png">
+			</div>
+		</div>
+        <div class="renwu_bq2"><img src="images/renwu3_bq_02.png"></div>
+        <div class="renwu_bh2"><img src="images/renwu3_bh_02.png"></div>
+        <div class="wenzi"><img class="manfen2" style="display:none" src="images/manfen2_03.png"></div>
+    </div>
+    <div class="renwu" style="display:none;">
+    	<div class="title"><img src="images/title3_03.png"></div>
+	    <div class="renwu_i">
+    		<img class="renw" src="images/renwu3_02.png">
+			<div class="scope3">
+				<div class="shoushi3"><img src="images/shoushi_03.png"></div>
+				<div class="yuhua" id="yuhua3"><img src="images/yuhua1_03.png"></div>
+				<img class="pao" src="images/paomo3_04.png">
+			</div>
+		</div>
+        <div class="renwu_bq3"><img src="images/renwu2_bq_02.png"></div>
+        <div class="renwu_bh3"><img src="images/renwu2_bh_02.png"></div>
+        <div class="wenzi"><img class="manfen3" style="display:none" src="images/manfen3_03.png"></div>
+    </div>
+    <div class="renwu" style="display:none;">
+    	<div class="title"><img src="images/title4_03.png"></div>
+	    <div class="renwu_i">
+    		<img class="renw" src="images/renwu4_02.png">
+			<div class="scope4">
+				<div class="shoushi4"><img src="images/shoushi_03.png"></div>
+				<div class="yuhua3" id="yuhua4"><img src="images/yuhua1_03.png"></div>
+				<img class="pao" src="images/paomo4_03.png">
+			</div>
+		</div>
+        <div class="renwu_bq4"><img src="images/renwu4_bq_02.png"></div>
+        <div class="renwu_bh4"><img src="images/renwu4_bh_02.png"></div>
+        <div class="wenzi"><img class="manfen4" style="display:none" src="images/manfen4_03.png"></div>
+    </div>
+    
+    <div class="paomo">
+    	<img src="images/paomo_03.png">
+    </div>
+    <div class="nengliangc">
+    	<div class="nengliang"></div>
+        <div class="nengliang"></div>
+        <div class="nengliang"></div>
+        <div class="nengliang"></div>
+    </div>
+    <div class="cover" id="miaoshu" style="display:none">
+    	<div class="cover_n">
+    	<div class="close"><img src="images/close_03.png"></div>
+        <div class="award">
+			<img src="images/eqe321.png">
+             <div class="miaoshu" style="display:none;">
+                <div class="award_img2"><img src="images/shiyong_yw_03.png"></div>
+                <div class="yw BounceIn"><img src="images/yinwei_03.png"></div>
+                <a class="award_btn" id="yw_btn" href="javascript:;"><img src="images/ljsyBtn_03.png"></a>
+            </div>
+             <div class="miaoshu" style="display:none;">
+                <div class="award_img2"><img src="images/shiyong_yl_03.png"></div>
+                <div class="yl BounceIn"><img src="images/yulan_03.png"></div>
+                <a class="award_btn" id="yl_btn" href="javascript:;"><img src="images/ljsyBtn_03.png"></a>
+            </div>
+             <div class="miaoshu" style="display:none;">
+                <div class="award_img2"><img src="images/shiyong_wy_03.png"></div>
+                 <div class="wy BounceIn"><img src="images/wanxiang_03.png"></div>
+                <a class="award_btn" id="wy_btn" href="javascript:;"><img src="images/ljsyBtn_03.png"></a>
+            </div>
+        </div>
+        </div>
+    </div>  
+    <div class="chanpin">
+    	<img class="zhiwujia" src="images/zhiwujia_03.png">
+        <div class="chanpin2 cp1"><img src="images/chanpin_05.png"></div>
+        <div class="chanpin3 cp1"><img src="images/chanpin_07.png"></div>
+        <div class="chanpin4 cp1"><img src="images/chanpin_09.png"></div>
+    </div>
+</div>
+
+<div class="wrap5" style="display:none;">
+	<div class="xuanwo" style="display:none;">
+		<a class="fen showInfo" href="javascript:;"></a>
+		<a class="lv showInfo" href="javascript:;"></a>
+	</div>
+	<div class="cover" id="award" style="display:none;">
+		<div class="status cover_v" id="jiangpin" style="display:none;">
+			<div class="close_v" id="close"><img src="images/close_03.png"></div>
+			<img src="images/eqe321.png">
+			<div class="award_v">
+				<div class="award_img_v">
+					<img src="images/victory_03.png">
+				</div>
+			 </div>
+		</div>
+		
+        <div class="award">
+			<div class="cover award_b" id="award_b" style="height: 480px; display: none;">
+				<div class="status">
+					<div class="close_v" id="start_b_close"><img src="images/close_03.png"></div>
+					<img src="images/eqe321.png">
+					<div class="victory">
+						<div class="tishi"><img src="images/322ewq32.png"></div>
+						<a class="award_btn" id="get" href="javascript:ga('send','event','meijiajing','moxiangxiang','click');"><img src="images/31231eqewq.png"></a>
+					</div>
+				</div>
+			</div> 
+			           
+
+            <div class="award_c" style="display:none;">
+				<div class="status">
+					<div class="close_v" id="start_c_close"><img src="images/close_03.png"></div>
+					<img src="images/eqe321.png">
+					<div class="info_box">
+						<p class="tip"><strong>已经成功抹香香了！</strong><br>填写信息有机会领取奖品体验</p>
+						<div class="info">
+							<p>姓名 <input class="input" id="name" type="text" value=""></p>
+							<p>电话 <input class="input" id="phone" type="tel" value=""></p>
+							<p id="tishi"></p>
+						</div>
+						<div class="award_info"><p>请填写真实的中文名字。</p></div>
+						<a class="award_btn" id="submit" href="javascript:;"><img src="images/eqwedad123.png"></a>
+					</div>
+				</div>
+            </div>
+        </div>
+     </div>
+</div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64176536-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+<script src="js/main.js"></script>
+<script src="js/drag.js"></script>
+    <script>
+	$(function(){
+	var h=$(window).height();
+	$('.wrap1').height(h);
+	$('.wrap2').height(h);
+	$('.wrap3').height(h);
+	$('.wrap4').height(h);
+	$('.wrap5').height(h);
+	$('.cover').height(h);
+	});
+	</script>
+     <script>
+        window.onload = function () {
+            var w = window.innerWidth
+                || document.documentElement.clientWidth
+                || document.body.clientWidth;
+            var h = window.innerHeight
+                 || document.documentElement.clientHeight
+                 || document.body.clientHeight;
+            $(".content").height(h+"px");
+            $(".cover1").height(h+"px");
+        }
+    </script>
+</html>
